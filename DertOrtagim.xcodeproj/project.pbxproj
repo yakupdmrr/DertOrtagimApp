@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		87783588270F854800AE8362 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87783587270F854800AE8362 /* AppDelegate.swift */; };
+		8778358A270F854800AE8362 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87783589270F854800AE8362 /* SceneDelegate.swift */; };
+		8778358C270F854800AE8362 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8778358B270F854800AE8362 /* ViewController.swift */; };
+		8778358F270F854800AE8362 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8778358D270F854800AE8362 /* Main.storyboard */; };
+		87783592270F854800AE8362 /* DertOrtagim.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87783590270F854800AE8362 /* DertOrtagim.xcdatamodeld */; };
+		87783594270F854900AE8362 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87783593270F854900AE8362 /* Assets.xcassets */; };
+		87783597270F854900AE8362 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87783595270F854900AE8362 /* LaunchScreen.storyboard */; };
+		877835A2270F854900AE8362 /* DertOrtagimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877835A1270F854900AE8362 /* DertOrtagimTests.swift */; };
+		877835AD270F854A00AE8362 /* DertOrtagimUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877835AC270F854A00AE8362 /* DertOrtagimUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8778359E270F854900AE8362 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8778357C270F854800AE8362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87783583270F854800AE8362;
+			remoteInfo = DertOrtagim;
+		};
+		877835A9270F854A00AE8362 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8778357C270F854800AE8362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87783583270F854800AE8362;
+			remoteInfo = DertOrtagim;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		87783584270F854800AE8362 /* DertOrtagim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DertOrtagim.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87783587270F854800AE8362 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		87783589270F854800AE8362 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8778358B270F854800AE8362 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8778358E270F854800AE8362 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		87783591270F854800AE8362 /* DertOrtagim.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DertOrtagim.xcdatamodel; sourceTree = "<group>"; };
+		87783593270F854900AE8362 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87783596270F854900AE8362 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		87783598270F854900AE8362 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8778359D270F854900AE8362 /* DertOrtagimTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DertOrtagimTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		877835A1270F854900AE8362 /* DertOrtagimTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DertOrtagimTests.swift; sourceTree = "<group>"; };
+		877835A3270F854900AE8362 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		877835A8270F854A00AE8362 /* DertOrtagimUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DertOrtagimUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		877835AC270F854A00AE8362 /* DertOrtagimUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DertOrtagimUITests.swift; sourceTree = "<group>"; };
+		877835AE270F854A00AE8362 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87783581270F854800AE8362 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8778359A270F854900AE8362 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		877835A5270F854A00AE8362 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8778357B270F854800AE8362 = {
+			isa = PBXGroup;
+			children = (
+				87783586270F854800AE8362 /* DertOrtagim */,
+				877835A0270F854900AE8362 /* DertOrtagimTests */,
+				877835AB270F854A00AE8362 /* DertOrtagimUITests */,
+				87783585270F854800AE8362 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		87783585270F854800AE8362 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87783584270F854800AE8362 /* DertOrtagim.app */,
+				8778359D270F854900AE8362 /* DertOrtagimTests.xctest */,
+				877835A8270F854A00AE8362 /* DertOrtagimUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87783586270F854800AE8362 /* DertOrtagim */ = {
+			isa = PBXGroup;
+			children = (
+				87783587270F854800AE8362 /* AppDelegate.swift */,
+				87783589270F854800AE8362 /* SceneDelegate.swift */,
+				8778358B270F854800AE8362 /* ViewController.swift */,
+				8778358D270F854800AE8362 /* Main.storyboard */,
+				87783593270F854900AE8362 /* Assets.xcassets */,
+				87783595270F854900AE8362 /* LaunchScreen.storyboard */,
+				87783598270F854900AE8362 /* Info.plist */,
+				87783590270F854800AE8362 /* DertOrtagim.xcdatamodeld */,
+			);
+			path = DertOrtagim;
+			sourceTree = "<group>";
+		};
+		877835A0270F854900AE8362 /* DertOrtagimTests */ = {
+			isa = PBXGroup;
+			children = (
+				877835A1270F854900AE8362 /* DertOrtagimTests.swift */,
+				877835A3270F854900AE8362 /* Info.plist */,
+			);
+			path = DertOrtagimTests;
+			sourceTree = "<group>";
+		};
+		877835AB270F854A00AE8362 /* DertOrtagimUITests */ = {
+			isa = PBXGroup;
+			children = (
+				877835AC270F854A00AE8362 /* DertOrtagimUITests.swift */,
+				877835AE270F854A00AE8362 /* Info.plist */,
+			);
+			path = DertOrtagimUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		87783583270F854800AE8362 /* DertOrtagim */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 877835B1270F854A00AE8362 /* Build configuration list for PBXNativeTarget "DertOrtagim" */;
+			buildPhases = (
+				87783580270F854800AE8362 /* Sources */,
+				87783581270F854800AE8362 /* Frameworks */,
+				87783582270F854800AE8362 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DertOrtagim;
+			productName = DertOrtagim;
+			productReference = 87783584270F854800AE8362 /* DertOrtagim.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8778359C270F854900AE8362 /* DertOrtagimTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 877835B4270F854A00AE8362 /* Build configuration list for PBXNativeTarget "DertOrtagimTests" */;
+			buildPhases = (
+				87783599270F854900AE8362 /* Sources */,
+				8778359A270F854900AE8362 /* Frameworks */,
+				8778359B270F854900AE8362 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8778359F270F854900AE8362 /* PBXTargetDependency */,
+			);
+			name = DertOrtagimTests;
+			productName = DertOrtagimTests;
+			productReference = 8778359D270F854900AE8362 /* DertOrtagimTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		877835A7270F854A00AE8362 /* DertOrtagimUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 877835B7270F854A00AE8362 /* Build configuration list for PBXNativeTarget "DertOrtagimUITests" */;
+			buildPhases = (
+				877835A4270F854A00AE8362 /* Sources */,
+				877835A5270F854A00AE8362 /* Frameworks */,
+				877835A6270F854A00AE8362 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				877835AA270F854A00AE8362 /* PBXTargetDependency */,
+			);
+			name = DertOrtagimUITests;
+			productName = DertOrtagimUITests;
+			productReference = 877835A8270F854A00AE8362 /* DertOrtagimUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8778357C270F854800AE8362 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					87783583270F854800AE8362 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					8778359C270F854900AE8362 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 87783583270F854800AE8362;
+					};
+					877835A7270F854A00AE8362 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 87783583270F854800AE8362;
+					};
+				};
+			};
+			buildConfigurationList = 8778357F270F854800AE8362 /* Build configuration list for PBXProject "DertOrtagim" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8778357B270F854800AE8362;
+			productRefGroup = 87783585270F854800AE8362 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87783583270F854800AE8362 /* DertOrtagim */,
+				8778359C270F854900AE8362 /* DertOrtagimTests */,
+				877835A7270F854A00AE8362 /* DertOrtagimUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		87783582270F854800AE8362 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87783597270F854900AE8362 /* LaunchScreen.storyboard in Resources */,
+				87783594270F854900AE8362 /* Assets.xcassets in Resources */,
+				8778358F270F854800AE8362 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8778359B270F854900AE8362 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		877835A6270F854A00AE8362 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		87783580270F854800AE8362 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8778358C270F854800AE8362 /* ViewController.swift in Sources */,
+				87783588270F854800AE8362 /* AppDelegate.swift in Sources */,
+				87783592270F854800AE8362 /* DertOrtagim.xcdatamodeld in Sources */,
+				8778358A270F854800AE8362 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87783599270F854900AE8362 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877835A2270F854900AE8362 /* DertOrtagimTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		877835A4270F854A00AE8362 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877835AD270F854A00AE8362 /* DertOrtagimUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8778359F270F854900AE8362 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87783583270F854800AE8362 /* DertOrtagim */;
+			targetProxy = 8778359E270F854900AE8362 /* PBXContainerItemProxy */;
+		};
+		877835AA270F854A00AE8362 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87783583270F854800AE8362 /* DertOrtagim */;
+			targetProxy = 877835A9270F854A00AE8362 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8778358D270F854800AE8362 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8778358E270F854800AE8362 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		87783595270F854900AE8362 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87783596270F854900AE8362 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		877835AF270F854A00AE8362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		877835B0270F854A00AE8362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		877835B2270F854A00AE8362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V6CZB46Y6J;
+				INFOPLIST_FILE = DertOrtagim/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yakup.demir.DertOrtagim;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		877835B3270F854A00AE8362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V6CZB46Y6J;
+				INFOPLIST_FILE = DertOrtagim/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yakup.demir.DertOrtagim;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		877835B5270F854A00AE8362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V6CZB46Y6J;
+				INFOPLIST_FILE = DertOrtagimTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yakup.demir.DertOrtagimTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DertOrtagim.app/DertOrtagim";
+			};
+			name = Debug;
+		};
+		877835B6270F854A00AE8362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V6CZB46Y6J;
+				INFOPLIST_FILE = DertOrtagimTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yakup.demir.DertOrtagimTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DertOrtagim.app/DertOrtagim";
+			};
+			name = Release;
+		};
+		877835B8270F854A00AE8362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V6CZB46Y6J;
+				INFOPLIST_FILE = DertOrtagimUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yakup.demir.DertOrtagimUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DertOrtagim;
+			};
+			name = Debug;
+		};
+		877835B9270F854A00AE8362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V6CZB46Y6J;
+				INFOPLIST_FILE = DertOrtagimUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yakup.demir.DertOrtagimUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DertOrtagim;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8778357F270F854800AE8362 /* Build configuration list for PBXProject "DertOrtagim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				877835AF270F854A00AE8362 /* Debug */,
+				877835B0270F854A00AE8362 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		877835B1270F854A00AE8362 /* Build configuration list for PBXNativeTarget "DertOrtagim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				877835B2270F854A00AE8362 /* Debug */,
+				877835B3270F854A00AE8362 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		877835B4270F854A00AE8362 /* Build configuration list for PBXNativeTarget "DertOrtagimTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				877835B5270F854A00AE8362 /* Debug */,
+				877835B6270F854A00AE8362 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		877835B7270F854A00AE8362 /* Build configuration list for PBXNativeTarget "DertOrtagimUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				877835B8270F854A00AE8362 /* Debug */,
+				877835B9270F854A00AE8362 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		87783590270F854800AE8362 /* DertOrtagim.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				87783591270F854800AE8362 /* DertOrtagim.xcdatamodel */,
+			);
+			currentVersion = 87783591270F854800AE8362 /* DertOrtagim.xcdatamodel */;
+			path = DertOrtagim.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8778357C270F854800AE8362 /* Project object */;
+}
