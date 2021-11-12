@@ -3,10 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87200F64272D855400D59E52 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87200F63272D855400D59E52 /* HomeViewController.swift */; };
+		87200F66272D858200D59E52 /* DMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87200F65272D858200D59E52 /* DMViewController.swift */; };
+		87200F68272D861800D59E52 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87200F67272D861800D59E52 /* NotificationViewController.swift */; };
+		87200F6A272D89C800D59E52 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87200F69272D89C800D59E52 /* ProfileViewController.swift */; };
+		8735574B2716044D0013093E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8735574A2716044D0013093E /* User.swift */; };
+		8735574D27160C790013093E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8735574C27160C790013093E /* UserService.swift */; };
+		87498ECB271C35F800CA5AF6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87498ECA271C35F800CA5AF6 /* LoginViewController.swift */; };
+		87498ECD271C360C00CA5AF6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87498ECC271C360C00CA5AF6 /* RegisterViewController.swift */; };
+		8763F3E8272DA1CB008AE403 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763F3E7272DA1CB008AE403 /* HomeTableViewCell.swift */; };
 		87783588270F854800AE8362 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87783587270F854800AE8362 /* AppDelegate.swift */; };
 		8778358A270F854800AE8362 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87783589270F854800AE8362 /* SceneDelegate.swift */; };
 		8778358C270F854800AE8362 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8778358B270F854800AE8362 /* ViewController.swift */; };
@@ -16,6 +25,18 @@
 		87783597270F854900AE8362 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87783595270F854900AE8362 /* LaunchScreen.storyboard */; };
 		877835A2270F854900AE8362 /* DertOrtagimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877835A1270F854900AE8362 /* DertOrtagimTests.swift */; };
 		877835AD270F854A00AE8362 /* DertOrtagimUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877835AC270F854A00AE8362 /* DertOrtagimUITests.swift */; };
+		877835BC270F862B00AE8362 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 877835BB270F862B00AE8362 /* Alamofire */; };
+		877835C8270F873800AE8362 /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877835C7270F873800AE8362 /* AlamofireManager.swift */; };
+		877835CA270F886A00AE8362 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877835C9270F886A00AE8362 /* Utility.swift */; };
+		877835CC270F889900AE8362 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877835CB270F889900AE8362 /* Constants.swift */; };
+		877835D0270F896500AE8362 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877835CF270F896500AE8362 /* Extension.swift */; };
+		8779DB54271E073200D90A4A /* BaseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8779DB53271E073200D90A4A /* BaseResult.swift */; };
+		8779DB57271E086900D90A4A /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = 8779DB56271E086900D90A4A /* ObjectMapper */; };
+		8779DB5B271E0F8300D90A4A /* BaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8779DB5A271E0F8300D90A4A /* BaseManager.swift */; };
+		87AC0DCE273C5A86006D07AC /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AC0DCD273C5A86006D07AC /* NewPostViewController.swift */; };
+		87AC0DD0273C6D05006D07AC /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87AC0DCF273C6D05006D07AC /* AlertView.xib */; };
+		87AC0DD2273C70D4006D07AC /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AC0DD1273C70D4006D07AC /* AlertView.swift */; };
+		87D990DC271B0C0D008F7237 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D990DB271B0C0D008F7237 /* NetworkMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +57,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		87200F63272D855400D59E52 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		87200F65272D858200D59E52 /* DMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMViewController.swift; sourceTree = "<group>"; };
+		87200F67272D861800D59E52 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		87200F69272D89C800D59E52 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8735574A2716044D0013093E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8735574C27160C790013093E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		87498ECA271C35F800CA5AF6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		87498ECC271C360C00CA5AF6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		8763F3E7272DA1CB008AE403 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		87783584270F854800AE8362 /* DertOrtagim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DertOrtagim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87783587270F854800AE8362 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87783589270F854800AE8362 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +81,16 @@
 		877835A8270F854A00AE8362 /* DertOrtagimUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DertOrtagimUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		877835AC270F854A00AE8362 /* DertOrtagimUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DertOrtagimUITests.swift; sourceTree = "<group>"; };
 		877835AE270F854A00AE8362 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		877835C7270F873800AE8362 /* AlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
+		877835C9270F886A00AE8362 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		877835CB270F889900AE8362 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		877835CF270F896500AE8362 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		8779DB53271E073200D90A4A /* BaseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResult.swift; sourceTree = "<group>"; };
+		8779DB5A271E0F8300D90A4A /* BaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseManager.swift; sourceTree = "<group>"; };
+		87AC0DCD273C5A86006D07AC /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
+		87AC0DCF273C6D05006D07AC /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
+		87AC0DD1273C70D4006D07AC /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		87D990DB271B0C0D008F7237 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8779DB57271E086900D90A4A /* ObjectMapper in Frameworks */,
+				877835BC270F862B00AE8362 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,10 +143,14 @@
 		87783586270F854800AE8362 /* DertOrtagim */ = {
 			isa = PBXGroup;
 			children = (
-				87783587270F854800AE8362 /* AppDelegate.swift */,
-				87783589270F854800AE8362 /* SceneDelegate.swift */,
-				8778358B270F854800AE8362 /* ViewController.swift */,
-				8778358D270F854800AE8362 /* Main.storyboard */,
+				877835C5270F871D00AE8362 /* View */,
+				877835C4270F871000AE8362 /* Controllers */,
+				877835C2270F86BD00AE8362 /* ViewModel */,
+				877835C1270F86B300AE8362 /* Service */,
+				877835C0270F867A00AE8362 /* Helper */,
+				877835BF270F867300AE8362 /* Manager */,
+				877835BE270F866500AE8362 /* Model */,
+				877835BD270F865D00AE8362 /* Core */,
 				87783593270F854900AE8362 /* Assets.xcassets */,
 				87783595270F854900AE8362 /* LaunchScreen.storyboard */,
 				87783598270F854900AE8362 /* Info.plist */,
@@ -131,6 +177,109 @@
 			path = DertOrtagimUITests;
 			sourceTree = "<group>";
 		};
+		877835BD270F865D00AE8362 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				87783587270F854800AE8362 /* AppDelegate.swift */,
+				87783589270F854800AE8362 /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		877835BE270F866500AE8362 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8735574A2716044D0013093E /* User.swift */,
+				8779DB53271E073200D90A4A /* BaseResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		877835BF270F867300AE8362 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				877835C7270F873800AE8362 /* AlamofireManager.swift */,
+				8779DB5A271E0F8300D90A4A /* BaseManager.swift */,
+				87AC0DD1273C70D4006D07AC /* AlertView.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		877835C0270F867A00AE8362 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				877835C3270F86F400AE8362 /* Extension */,
+				877835C9270F886A00AE8362 /* Utility.swift */,
+				877835CB270F889900AE8362 /* Constants.swift */,
+				87D990DB271B0C0D008F7237 /* NetworkMonitor.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		877835C1270F86B300AE8362 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8735574C27160C790013093E /* UserService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		877835C2270F86BD00AE8362 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		877835C3270F86F400AE8362 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				877835CF270F896500AE8362 /* Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		877835C4270F871000AE8362 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8778358B270F854800AE8362 /* ViewController.swift */,
+				87498ECA271C35F800CA5AF6 /* LoginViewController.swift */,
+				87498ECC271C360C00CA5AF6 /* RegisterViewController.swift */,
+				87200F63272D855400D59E52 /* HomeViewController.swift */,
+				87200F65272D858200D59E52 /* DMViewController.swift */,
+				87200F67272D861800D59E52 /* NotificationViewController.swift */,
+				87200F69272D89C800D59E52 /* ProfileViewController.swift */,
+				87AC0DCD273C5A86006D07AC /* NewPostViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		877835C5270F871D00AE8362 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				877835D2270F899E00AE8362 /* StoryboardView */,
+				877835D1270F899000AE8362 /* TableCells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		877835D1270F899000AE8362 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				8763F3E7272DA1CB008AE403 /* HomeTableViewCell.swift */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
+		877835D2270F899E00AE8362 /* StoryboardView */ = {
+			isa = PBXGroup;
+			children = (
+				8778358D270F854800AE8362 /* Main.storyboard */,
+				87AC0DCF273C6D05006D07AC /* AlertView.xib */,
+			);
+			path = StoryboardView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,6 +296,10 @@
 			dependencies = (
 			);
 			name = DertOrtagim;
+			packageProductDependencies = (
+				877835BB270F862B00AE8362 /* Alamofire */,
+				8779DB56271E086900D90A4A /* ObjectMapper */,
+			);
 			productName = DertOrtagim;
 			productReference = 87783584270F854800AE8362 /* DertOrtagim.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +371,10 @@
 				Base,
 			);
 			mainGroup = 8778357B270F854800AE8362;
+			packageReferences = (
+				877835BA270F862B00AE8362 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8779DB55271E086900D90A4A /* XCRemoteSwiftPackageReference "ObjectMapper" */,
+			);
 			productRefGroup = 87783585270F854800AE8362 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -235,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87783597270F854900AE8362 /* LaunchScreen.storyboard in Resources */,
+				87AC0DD0273C6D05006D07AC /* AlertView.xib in Resources */,
 				87783594270F854900AE8362 /* Assets.xcassets in Resources */,
 				8778358F270F854800AE8362 /* Main.storyboard in Resources */,
 			);
@@ -261,9 +419,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87200F66272D858200D59E52 /* DMViewController.swift in Sources */,
+				87200F6A272D89C800D59E52 /* ProfileViewController.swift in Sources */,
+				877835D0270F896500AE8362 /* Extension.swift in Sources */,
+				8779DB5B271E0F8300D90A4A /* BaseManager.swift in Sources */,
+				87200F64272D855400D59E52 /* HomeViewController.swift in Sources */,
 				8778358C270F854800AE8362 /* ViewController.swift in Sources */,
 				87783588270F854800AE8362 /* AppDelegate.swift in Sources */,
+				877835CA270F886A00AE8362 /* Utility.swift in Sources */,
+				8763F3E8272DA1CB008AE403 /* HomeTableViewCell.swift in Sources */,
 				87783592270F854800AE8362 /* DertOrtagim.xcdatamodeld in Sources */,
+				87AC0DCE273C5A86006D07AC /* NewPostViewController.swift in Sources */,
+				87D990DC271B0C0D008F7237 /* NetworkMonitor.swift in Sources */,
+				8735574D27160C790013093E /* UserService.swift in Sources */,
+				877835C8270F873800AE8362 /* AlamofireManager.swift in Sources */,
+				87200F68272D861800D59E52 /* NotificationViewController.swift in Sources */,
+				877835CC270F889900AE8362 /* Constants.swift in Sources */,
+				87498ECB271C35F800CA5AF6 /* LoginViewController.swift in Sources */,
+				87AC0DD2273C70D4006D07AC /* AlertView.swift in Sources */,
+				8779DB54271E073200D90A4A /* BaseResult.swift in Sources */,
+				87498ECD271C360C00CA5AF6 /* RegisterViewController.swift in Sources */,
+				8735574B2716044D0013093E /* User.swift in Sources */,
 				8778358A270F854800AE8362 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,6 +773,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		877835BA270F862B00AE8362 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.4;
+			};
+		};
+		8779DB55271E086900D90A4A /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		877835BB270F862B00AE8362 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 877835BA270F862B00AE8362 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		8779DB56271E086900D90A4A /* ObjectMapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8779DB55271E086900D90A4A /* XCRemoteSwiftPackageReference "ObjectMapper" */;
+			productName = ObjectMapper;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		87783590270F854800AE8362 /* DertOrtagim.xcdatamodeld */ = {
