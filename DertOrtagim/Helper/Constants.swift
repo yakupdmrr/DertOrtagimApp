@@ -8,6 +8,6 @@
 import Foundation
 
 class Constants {
-    
+    static let baseURL :String = ""
 }
 
