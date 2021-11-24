@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 class Utility {
         
@@ -34,9 +35,15 @@ class Utility {
         button.clipsToBounds = true
         button.layer.masksToBounds = false
         button.layer.shadowRadius = 10
-        button.layer.shadowOpacity = 0.5
+        button.layer.shadowOpacity = 0.2
         button.layer.shadowOffset = CGSize(width: 1, height: 1)
         button.layer.shadowColor = UIColor.link.cgColor
     }
     
+    func textFieldPlaceholderColor(textField: UITextField , placeholder:String){
+        textField.attributedPlaceholder = NSAttributedString(
+            string: placeholder,
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+    }
 }
+            

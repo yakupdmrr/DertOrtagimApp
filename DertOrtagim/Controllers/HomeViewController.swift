@@ -7,9 +7,10 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
 
     @IBOutlet weak var postTableView: UITableView!
+    
     private let floatingButton : UIButton = {
         let button = UIButton(frame:CGRect(x: 0, y: 0, width: 60, height: 60))
         button.layer.cornerRadius = 30
@@ -27,10 +28,37 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(floatingButton)
+        
+        navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.search, target: self, action: #selector(searchButtonClicked))
+        
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.compose, target: self, action: #selector(gotoSettingVC))
+        
         postTableView.delegate = self
         postTableView.dataSource = self
 
     }
+    
+    @objc private func gotoSettingVC(){
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let titleImageView =  UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+        
+        titleImageView.contentMode = .scaleAspectFit
+        
+        let image = UIImage(named: "logo")
+        titleImageView.image = image
+        
+        
+        navigationItem.titleView = titleImageView
+    }
+    
+
+    @objc private func searchButtonClicked(){
+        print("SearchView")
+    }
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -48,15 +76,18 @@ class HomeViewController: UIViewController {
 }
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30
+        return 15
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = postTableView.dequeueReusableCell(withIdentifier: "homeTableCell", for: indexPath) as! HomeTableViewCell
         cell.userImage.image = UIImage(named: "profilePhoto")
-        cell.postTextTxt.text = "Test Test jaskdjaskdjasdkjaskakasakjaskasdjaskd"
-        cell.userNameTxt.text = "yakupdmrr"
+        cell.userNameLabel.text = "yakupdmrr"
+        cell.postTextTxt.text = "Officia veniam ad cillum laboris ut aute. Nostrud aute consequat ea eu voluptate non. Anim incididunt ullamco velit quis eiusmod eiusmod cupidatat veniam."
+        
         return cell
     }
 }
+

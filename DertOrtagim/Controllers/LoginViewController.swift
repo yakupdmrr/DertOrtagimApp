@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -31,6 +31,9 @@ class LoginViewController: UIViewController {
         
         if let imgEmail  = emailImage { Utility.instance.textFieldAddImage(textField: emailTextField, img: imgEmail) }
         if let imgPassword = passwordImage { Utility.instance.textFieldAddImage(textField: passwordTextField, img: imgPassword) }
+        
+        Utility.instance.textFieldPlaceholderColor(textField: emailTextField, placeholder: " EMAİL")
+        Utility.instance.textFieldPlaceholderColor(textField: passwordTextField, placeholder: " PASSWORD")
         
         passwordTextField.isSecureTextEntry = true
     }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+final class RegisterViewController: UIViewController {
 
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var lastNameTextField: UITextField!
@@ -23,8 +23,13 @@ class RegisterViewController: UIViewController {
         Utility.instance.textFieldLine(textField: firstNameTextField)
         Utility.instance.textFieldLine(textField: lastNameTextField)
         
+        
+        Utility.instance.textFieldPlaceholderColor(textField: emailTextField, placeholder: " EMAİL")
+        Utility.instance.textFieldPlaceholderColor(textField: passwordTextField, placeholder: " PASSWORD")
+        Utility.instance.textFieldPlaceholderColor(textField: firstNameTextField, placeholder: " AD")
+        Utility.instance.textFieldPlaceholderColor(textField: lastNameTextField, placeholder: " SOYAD")
+        
         passwordTextField.isSecureTextEntry = true
-     
     }
 
     @IBAction func register(_ sender: Any) {
