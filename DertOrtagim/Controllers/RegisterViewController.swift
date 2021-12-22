@@ -9,6 +9,7 @@ import UIKit
 
 final class RegisterViewController: UIViewController {
 
+    @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var firstNameTextField: UITextField!
@@ -17,22 +18,46 @@ final class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Utility.instance.buttonProperties(button: registerButton)
-        Utility.instance.textFieldLine(textField: emailTextField)
-        Utility.instance.textFieldLine(textField: passwordTextField)
-        Utility.instance.textFieldLine(textField: firstNameTextField)
-        Utility.instance.textFieldLine(textField: lastNameTextField)
+        textFieldProperties()
+    }
+    
+    private func textFieldProperties(){
+        registerButton.buttonProperties()
+        firstNameTextField.textFieldLine()
+        lastNameTextField.textFieldLine()
+        emailTextField.textFieldLine()
+        passwordTextField.textFieldLine()
+        userNameTextField.textFieldLine()
         
-        
-        Utility.instance.textFieldPlaceholderColor(textField: emailTextField, placeholder: " EMAİL")
-        Utility.instance.textFieldPlaceholderColor(textField: passwordTextField, placeholder: " PASSWORD")
-        Utility.instance.textFieldPlaceholderColor(textField: firstNameTextField, placeholder: " AD")
-        Utility.instance.textFieldPlaceholderColor(textField: lastNameTextField, placeholder: " SOYAD")
+        emailTextField.textFieldPlaceholderColor(placeholder: " EMAİL")
+        passwordTextField.textFieldPlaceholderColor(placeholder: " PASSWORD")
+        firstNameTextField.textFieldPlaceholderColor(placeholder: " AD")
+        lastNameTextField.textFieldPlaceholderColor(placeholder: " SOYAD")
+        userNameTextField.textFieldPlaceholderColor(placeholder: " KULLANICI ADI")
         
         passwordTextField.isSecureTextEntry = true
     }
+    
+    private func tryRegister(){
+        var registerParameters = RegisterParameters()
+        
+        registerParameters.email  = emailTextField.text
+        registerParameters.password = passwordTextField.text
+        registerParameters.firstName = firstNameTextField.text
+        registerParameters.lastName = lastNameTextField.text
+        registerParameters.userName = userNameTextField.text
+        
+        UserService.instance.register(parameters: registerParameters) { result in
+            
+            if result.success {
+                self.performSegue(withIdentifier: "toLoginPage", sender: nil)
+            } else {
+                AlertView.instance.showMessage(title: "Kayıt Hatası", message: result.message, type: .error)
+            }
+        }
+    }
 
     @IBAction func register(_ sender: Any) {
-        performSegue(withIdentifier: "toLoginPage", sender: nil)
+        tryRegister()
     }
 }

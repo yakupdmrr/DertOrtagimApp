@@ -34,7 +34,7 @@ class AlertView : UIView {
         parentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
     
-    func showMessage(title: String, message: String,type: AlertTpye)  {
+    func showMessage(title: String, message: String,type: AlertType)  {
         
         alertTitle.text = title
         alertMessage.text = message
@@ -58,11 +58,26 @@ class AlertView : UIView {
         
     }
     
-    func showMessage(message : String, completion : @escaping () -> Void ) {
+    func showMessage(message : String, type : AlertType , completion : @escaping () -> Void ) {
         
         alertMessage.text = message
         
         doneButton.setTitle("Tamam", for: .normal)
+        
+        switch type {
+        case .success:
+            alertImageView.image = UIImage(systemName: "checkmark.circle.fill")
+            alertView.tintColor = UIColor.systemGreen
+            doneButton.backgroundColor = UIColor.systemGreen
+        case .error:
+            alertImageView.image = UIImage(systemName: "multiply.circle.fill")
+            alertView.tintColor = UIColor.red
+            doneButton.backgroundColor = UIColor.red
+        case .warning:
+            alertImageView.image = UIImage(systemName: "exclamationmark.triangle.fill")
+            alertView.tintColor = UIColor.orange
+            doneButton.backgroundColor = UIColor.orange
+        }
         alertViewProp()
         
     }
@@ -87,7 +102,7 @@ class AlertView : UIView {
     }
     
     
-    enum AlertTpye : String{
+    enum AlertType : String{
         case success = "success"
         case warning = "warning"
         case error = "error"

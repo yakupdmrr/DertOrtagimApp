@@ -16,39 +16,56 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textFieldProp()
-        Utility.instance.buttonProperties(button: loginButton)
+        textFieldProperties()
+        loginButton.buttonProperties()
     }
-    
-
-    
-    private func textFieldProp(){
-        Utility.instance.textFieldLine(textField: emailTextField)
-        Utility.instance.textFieldLine(textField: passwordTextField)
         
-        let emailImage  = UIImage(systemName: "envelope")
+    private func textFieldProperties(){
+        emailTextField.textFieldLine()
+        passwordTextField.textFieldLine()
+        
+        let emailImage  = UIImage(systemName: "person")
         let passwordImage = UIImage(systemName: "key")
         
-        if let imgEmail  = emailImage { Utility.instance.textFieldAddImage(textField: emailTextField, img: imgEmail) }
-        if let imgPassword = passwordImage { Utility.instance.textFieldAddImage(textField: passwordTextField, img: imgPassword) }
+        if let imgEmail  = emailImage { emailTextField.textFieldLeftImage(img: imgEmail) }
+        if let imgPassword = passwordImage { passwordTextField.textFieldLeftImage(img: imgPassword) }
         
-        Utility.instance.textFieldPlaceholderColor(textField: emailTextField, placeholder: " EMAİL")
-        Utility.instance.textFieldPlaceholderColor(textField: passwordTextField, placeholder: " PASSWORD")
+        emailTextField.textFieldPlaceholderColor( placeholder: " USERNAME")
+        passwordTextField.textFieldPlaceholderColor(placeholder: " PASSWORD")
         
         passwordTextField.isSecureTextEntry = true
     }
     
-    
-    // MARK: LOGİN
-    @IBAction func login(_ sender: Any) {
-        performSegue(withIdentifier: "toTabBarVC", sender: nil)
+    private func tryLogin (){
+        var loginParameters = LoginParameters()
+        
+        loginParameters.userName = emailTextField.text
+        loginParameters.password = passwordTextField.text
+        
+        UserService.instance.login(parameters: loginParameters) { result in
+                 if result.token != nil {
+                    self.performSegue(withIdentifier: "toTabBarVC", sender: nil)
+                     if let token = result.token {
+                         LoginManager.instance.setToken(token: token)
+                     }
+                     if let expiration = result.expiration {
+                         LoginManager.instance.setExpiration(expiration: expiration)
+                     }
+                } else {
+                    AlertView.instance.showMessage(title: "HATA", message: "Giriş hatası", type: .warning)
+                }
+        }
     }
     
-    // MARK: REGISTER TO PAGE
+    // MARK: Login
+    @IBAction func login(_ sender: Any) {
+         tryLogin()
+    }
+    
+    // MARK: Register to Page
     @IBAction func toRegisterPage(_ sender: Any) {
         
         
+        
     }
-    
-    
 }

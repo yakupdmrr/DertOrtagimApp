@@ -13,7 +13,10 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var commentButton: UIButton!
     @IBOutlet weak var postTextTxt: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var commentCountText: UILabel!
     @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var favoriteCountText: UILabel!
+    @IBOutlet weak var postDateText: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         

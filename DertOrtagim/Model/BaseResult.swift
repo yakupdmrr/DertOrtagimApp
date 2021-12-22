@@ -1,10 +1,3 @@
-//
-//  BaseResult.swift
-//  DertOrtagim
-//
-//  Created by Yakup Demir on 18.10.2021.
-//
-
 import Foundation
 
 

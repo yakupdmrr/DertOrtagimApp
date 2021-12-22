@@ -3,19 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87089E022771190600F563A3 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87089E012771190600F563A3 /* LoginManager.swift */; };
+		87089E0427712B6300F563A3 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87089E0327712B6300F563A3 /* SessionManager.swift */; };
+		87089E0627712C8300F563A3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87089E0527712C8300F563A3 /* BaseViewController.swift */; };
 		87200F64272D855400D59E52 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87200F63272D855400D59E52 /* HomeViewController.swift */; };
 		87200F66272D858200D59E52 /* DMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87200F65272D858200D59E52 /* DMViewController.swift */; };
 		87200F68272D861800D59E52 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87200F67272D861800D59E52 /* NotificationViewController.swift */; };
 		87200F6A272D89C800D59E52 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87200F69272D89C800D59E52 /* ProfileViewController.swift */; };
-		8735574B2716044D0013093E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8735574A2716044D0013093E /* User.swift */; };
 		8735574D27160C790013093E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8735574C27160C790013093E /* UserService.swift */; };
 		87498ECB271C35F800CA5AF6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87498ECA271C35F800CA5AF6 /* LoginViewController.swift */; };
 		87498ECD271C360C00CA5AF6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87498ECC271C360C00CA5AF6 /* RegisterViewController.swift */; };
+		874E4F34276FE8CD00B93379 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874E4F33276FE8CD00B93379 /* LoginResult.swift */; };
+		874F1DC7275AA08800D94366 /* BaseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874F1DC6275AA08800D94366 /* BaseResult.swift */; };
+		8762880B2764E68400154AAB /* LikePostParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8762880A2764E68400154AAB /* LikePostParameters.swift */; };
 		8763F3E8272DA1CB008AE403 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763F3E7272DA1CB008AE403 /* HomeTableViewCell.swift */; };
+		8763F68F2765E9DD00565E0A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763F68E2765E9DD00565E0A /* Post.swift */; };
+		8763F6912765EEE300565E0A /* CreatePostParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763F6902765EEE300565E0A /* CreatePostParameters.swift */; };
+		8763F6932765FC3900565E0A /* UpdateUserProfileParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8763F6922765FC3900565E0A /* UpdateUserProfileParameters.swift */; };
+		8764A57C276BE0F90064F4B8 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8764A57B276BE0F90064F4B8 /* ProfileTableViewCell.swift */; };
+		8764A57E276E1F220064F4B8 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8764A57D276E1F210064F4B8 /* PostDetailViewController.swift */; };
+		8764A580276E24870064F4B8 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8764A57F276E24870064F4B8 /* CommentTableViewCell.swift */; };
+		8764A582276F67D50064F4B8 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8764A581276F67D50064F4B8 /* BaseModel.swift */; };
+		8764A584276F69720064F4B8 /* RegisterResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8764A583276F69720064F4B8 /* RegisterResult.swift */; };
 		87783588270F854800AE8362 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87783587270F854800AE8362 /* AppDelegate.swift */; };
 		8778358A270F854800AE8362 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87783589270F854800AE8362 /* SceneDelegate.swift */; };
 		8778358C270F854800AE8362 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8778358B270F854800AE8362 /* ViewController.swift */; };
@@ -25,18 +38,22 @@
 		87783597270F854900AE8362 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87783595270F854900AE8362 /* LaunchScreen.storyboard */; };
 		877835A2270F854900AE8362 /* DertOrtagimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877835A1270F854900AE8362 /* DertOrtagimTests.swift */; };
 		877835AD270F854A00AE8362 /* DertOrtagimUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877835AC270F854A00AE8362 /* DertOrtagimUITests.swift */; };
-		877835BC270F862B00AE8362 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 877835BB270F862B00AE8362 /* Alamofire */; };
 		877835C8270F873800AE8362 /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877835C7270F873800AE8362 /* AlamofireManager.swift */; };
 		877835CA270F886A00AE8362 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877835C9270F886A00AE8362 /* Utility.swift */; };
 		877835CC270F889900AE8362 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877835CB270F889900AE8362 /* Constants.swift */; };
-		877835D0270F896500AE8362 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877835CF270F896500AE8362 /* Extension.swift */; };
-		8779DB54271E073200D90A4A /* BaseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8779DB53271E073200D90A4A /* BaseResult.swift */; };
-		8779DB57271E086900D90A4A /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = 8779DB56271E086900D90A4A /* ObjectMapper */; };
 		8779DB5B271E0F8300D90A4A /* BaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8779DB5A271E0F8300D90A4A /* BaseManager.swift */; };
 		87AC0DCE273C5A86006D07AC /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AC0DCD273C5A86006D07AC /* NewPostViewController.swift */; };
 		87AC0DD0273C6D05006D07AC /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87AC0DCF273C6D05006D07AC /* AlertView.xib */; };
 		87AC0DD2273C70D4006D07AC /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AC0DD1273C70D4006D07AC /* AlertView.swift */; };
 		87D990DC271B0C0D008F7237 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D990DB271B0C0D008F7237 /* NetworkMonitor.swift */; };
+		87E57308275CB3F4009553C1 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E57307275CB3F4009553C1 /* TextFieldExtension.swift */; };
+		87E5730A275CB73B009553C1 /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E57309275CB73B009553C1 /* ButtonExtension.swift */; };
+		87E5730C275CB74D009553C1 /* TextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E5730B275CB74D009553C1 /* TextViewExtension.swift */; };
+		87EF5B472762C3C3001B57E4 /* RegisterParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EF5B462762C3C3001B57E4 /* RegisterParameters.swift */; };
+		87EF5B492762C581001B57E4 /* LoginParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EF5B482762C581001B57E4 /* LoginParameters.swift */; };
+		8BC52003C722FC391C475582 /* Pods_DertOrtagim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86CA7E54BB64683E3903C0D4 /* Pods_DertOrtagim.framework */; };
+		BF967990D695369346DC40A8 /* Pods_DertOrtagim_DertOrtagimUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5BF92F0557EF17B37ED2D3 /* Pods_DertOrtagim_DertOrtagimUITests.framework */; };
+		DBFD2694265A50D772629473 /* Pods_DertOrtagimTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CAB535530AE20746DC322C1 /* Pods_DertOrtagimTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,15 +74,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E4F1D3D1D66665809BBD0D7 /* Pods-DertOrtagimTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DertOrtagimTests.release.xcconfig"; path = "Target Support Files/Pods-DertOrtagimTests/Pods-DertOrtagimTests.release.xcconfig"; sourceTree = "<group>"; };
+		4E5BF92F0557EF17B37ED2D3 /* Pods_DertOrtagim_DertOrtagimUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DertOrtagim_DertOrtagimUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CAB535530AE20746DC322C1 /* Pods_DertOrtagimTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DertOrtagimTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CF9A5E63386B08A5A44F802 /* Pods-DertOrtagim.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DertOrtagim.release.xcconfig"; path = "Target Support Files/Pods-DertOrtagim/Pods-DertOrtagim.release.xcconfig"; sourceTree = "<group>"; };
+		86CA7E54BB64683E3903C0D4 /* Pods_DertOrtagim.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DertOrtagim.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87089E012771190600F563A3 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		87089E0327712B6300F563A3 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		87089E0527712C8300F563A3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		87200F63272D855400D59E52 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		87200F65272D858200D59E52 /* DMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMViewController.swift; sourceTree = "<group>"; };
 		87200F67272D861800D59E52 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		87200F69272D89C800D59E52 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		8735574A2716044D0013093E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		873230217D4DC5B8B034C90F /* Pods-DertOrtagimTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DertOrtagimTests.debug.xcconfig"; path = "Target Support Files/Pods-DertOrtagimTests/Pods-DertOrtagimTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8735574C27160C790013093E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		87498ECA271C35F800CA5AF6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		87498ECC271C360C00CA5AF6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		874E4F33276FE8CD00B93379 /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
+		874F1DC6275AA08800D94366 /* BaseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResult.swift; sourceTree = "<group>"; };
+		8762880A2764E68400154AAB /* LikePostParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePostParameters.swift; sourceTree = "<group>"; };
 		8763F3E7272DA1CB008AE403 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		8763F68E2765E9DD00565E0A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		8763F6902765EEE300565E0A /* CreatePostParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostParameters.swift; sourceTree = "<group>"; };
+		8763F6922765FC3900565E0A /* UpdateUserProfileParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserProfileParameters.swift; sourceTree = "<group>"; };
+		8764A57B276BE0F90064F4B8 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		8764A57D276E1F210064F4B8 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
+		8764A57F276E24870064F4B8 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		8764A581276F67D50064F4B8 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		8764A583276F69720064F4B8 /* RegisterResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResult.swift; sourceTree = "<group>"; };
 		87783584270F854800AE8362 /* DertOrtagim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DertOrtagim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87783587270F854800AE8362 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87783589270F854800AE8362 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,13 +120,19 @@
 		877835C7270F873800AE8362 /* AlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
 		877835C9270F886A00AE8362 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		877835CB270F889900AE8362 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		877835CF270F896500AE8362 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		8779DB53271E073200D90A4A /* BaseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResult.swift; sourceTree = "<group>"; };
 		8779DB5A271E0F8300D90A4A /* BaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseManager.swift; sourceTree = "<group>"; };
 		87AC0DCD273C5A86006D07AC /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		87AC0DCF273C6D05006D07AC /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 		87AC0DD1273C70D4006D07AC /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		87D990DB271B0C0D008F7237 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		87E57307275CB3F4009553C1 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
+		87E57309275CB73B009553C1 /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
+		87E5730B275CB74D009553C1 /* TextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewExtension.swift; sourceTree = "<group>"; };
+		87EF5B462762C3C3001B57E4 /* RegisterParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterParameters.swift; sourceTree = "<group>"; };
+		87EF5B482762C581001B57E4 /* LoginParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginParameters.swift; sourceTree = "<group>"; };
+		953D5E4177987DD3EAEB2809 /* Pods-DertOrtagim.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DertOrtagim.debug.xcconfig"; path = "Target Support Files/Pods-DertOrtagim/Pods-DertOrtagim.debug.xcconfig"; sourceTree = "<group>"; };
+		AC414E3945436390AAD7AD20 /* Pods-DertOrtagim-DertOrtagimUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DertOrtagim-DertOrtagimUITests.release.xcconfig"; path = "Target Support Files/Pods-DertOrtagim-DertOrtagimUITests/Pods-DertOrtagim-DertOrtagimUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C444935914BDC95A3C14B684 /* Pods-DertOrtagim-DertOrtagimUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DertOrtagim-DertOrtagimUITests.debug.xcconfig"; path = "Target Support Files/Pods-DertOrtagim-DertOrtagimUITests/Pods-DertOrtagim-DertOrtagimUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8779DB57271E086900D90A4A /* ObjectMapper in Frameworks */,
-				877835BC270F862B00AE8362 /* Alamofire in Frameworks */,
+				8BC52003C722FC391C475582 /* Pods_DertOrtagim.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBFD2694265A50D772629473 /* Pods_DertOrtagimTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,12 +156,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF967990D695369346DC40A8 /* Pods_DertOrtagim_DertOrtagimUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8763F68D2765E99700565E0A /* ResultModel */ = {
+			isa = PBXGroup;
+			children = (
+				8763F68E2765E9DD00565E0A /* Post.swift */,
+				8764A581276F67D50064F4B8 /* BaseModel.swift */,
+				8764A583276F69720064F4B8 /* RegisterResult.swift */,
+				874E4F33276FE8CD00B93379 /* LoginResult.swift */,
+			);
+			path = ResultModel;
+			sourceTree = "<group>";
+		};
 		8778357B270F854800AE8362 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +181,8 @@
 				877835A0270F854900AE8362 /* DertOrtagimTests */,
 				877835AB270F854A00AE8362 /* DertOrtagimUITests */,
 				87783585270F854800AE8362 /* Products */,
+				DEAD4BB203DB9D52E1E13E31 /* Pods */,
+				DC2A7CEA7CD054EF6E7B5D5C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,8 +245,9 @@
 		877835BE270F866500AE8362 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8735574A2716044D0013093E /* User.swift */,
-				8779DB53271E073200D90A4A /* BaseResult.swift */,
+				8763F68D2765E99700565E0A /* ResultModel */,
+				87EF5B452762C033001B57E4 /* ParametersModel */,
+				874F1DC6275AA08800D94366 /* BaseResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,6 +258,8 @@
 				877835C7270F873800AE8362 /* AlamofireManager.swift */,
 				8779DB5A271E0F8300D90A4A /* BaseManager.swift */,
 				87AC0DD1273C70D4006D07AC /* AlertView.swift */,
+				87089E012771190600F563A3 /* LoginManager.swift */,
+				87089E0327712B6300F563A3 /* SessionManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -234,7 +293,9 @@
 		877835C3270F86F400AE8362 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				877835CF270F896500AE8362 /* Extension.swift */,
+				87E57307275CB3F4009553C1 /* TextFieldExtension.swift */,
+				87E57309275CB73B009553C1 /* ButtonExtension.swift */,
+				87E5730B275CB74D009553C1 /* TextViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -250,6 +311,8 @@
 				87200F67272D861800D59E52 /* NotificationViewController.swift */,
 				87200F69272D89C800D59E52 /* ProfileViewController.swift */,
 				87AC0DCD273C5A86006D07AC /* NewPostViewController.swift */,
+				8764A57D276E1F210064F4B8 /* PostDetailViewController.swift */,
+				87089E0527712C8300F563A3 /* BaseViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -267,6 +330,8 @@
 			isa = PBXGroup;
 			children = (
 				8763F3E7272DA1CB008AE403 /* HomeTableViewCell.swift */,
+				8764A57B276BE0F90064F4B8 /* ProfileTableViewCell.swift */,
+				8764A57F276E24870064F4B8 /* CommentTableViewCell.swift */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -280,6 +345,41 @@
 			path = StoryboardView;
 			sourceTree = "<group>";
 		};
+		87EF5B452762C033001B57E4 /* ParametersModel */ = {
+			isa = PBXGroup;
+			children = (
+				87EF5B462762C3C3001B57E4 /* RegisterParameters.swift */,
+				87EF5B482762C581001B57E4 /* LoginParameters.swift */,
+				8762880A2764E68400154AAB /* LikePostParameters.swift */,
+				8763F6902765EEE300565E0A /* CreatePostParameters.swift */,
+				8763F6922765FC3900565E0A /* UpdateUserProfileParameters.swift */,
+			);
+			path = ParametersModel;
+			sourceTree = "<group>";
+		};
+		DC2A7CEA7CD054EF6E7B5D5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86CA7E54BB64683E3903C0D4 /* Pods_DertOrtagim.framework */,
+				4E5BF92F0557EF17B37ED2D3 /* Pods_DertOrtagim_DertOrtagimUITests.framework */,
+				7CAB535530AE20746DC322C1 /* Pods_DertOrtagimTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DEAD4BB203DB9D52E1E13E31 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				953D5E4177987DD3EAEB2809 /* Pods-DertOrtagim.debug.xcconfig */,
+				7CF9A5E63386B08A5A44F802 /* Pods-DertOrtagim.release.xcconfig */,
+				C444935914BDC95A3C14B684 /* Pods-DertOrtagim-DertOrtagimUITests.debug.xcconfig */,
+				AC414E3945436390AAD7AD20 /* Pods-DertOrtagim-DertOrtagimUITests.release.xcconfig */,
+				873230217D4DC5B8B034C90F /* Pods-DertOrtagimTests.debug.xcconfig */,
+				2E4F1D3D1D66665809BBD0D7 /* Pods-DertOrtagimTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -287,9 +387,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 877835B1270F854A00AE8362 /* Build configuration list for PBXNativeTarget "DertOrtagim" */;
 			buildPhases = (
+				2A9E45464275322BAC4B1255 /* [CP] Check Pods Manifest.lock */,
 				87783580270F854800AE8362 /* Sources */,
 				87783581270F854800AE8362 /* Frameworks */,
 				87783582270F854800AE8362 /* Resources */,
+				998DCA1B0EF02900FDF5C52C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,8 +399,6 @@
 			);
 			name = DertOrtagim;
 			packageProductDependencies = (
-				877835BB270F862B00AE8362 /* Alamofire */,
-				8779DB56271E086900D90A4A /* ObjectMapper */,
 			);
 			productName = DertOrtagim;
 			productReference = 87783584270F854800AE8362 /* DertOrtagim.app */;
@@ -308,6 +408,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 877835B4270F854A00AE8362 /* Build configuration list for PBXNativeTarget "DertOrtagimTests" */;
 			buildPhases = (
+				2868B46722240D37796E31C4 /* [CP] Check Pods Manifest.lock */,
 				87783599270F854900AE8362 /* Sources */,
 				8778359A270F854900AE8362 /* Frameworks */,
 				8778359B270F854900AE8362 /* Resources */,
@@ -326,9 +427,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 877835B7270F854A00AE8362 /* Build configuration list for PBXNativeTarget "DertOrtagimUITests" */;
 			buildPhases = (
+				0B6220E84B9E1365AE79F9C9 /* [CP] Check Pods Manifest.lock */,
 				877835A4270F854A00AE8362 /* Sources */,
 				877835A5270F854A00AE8362 /* Frameworks */,
 				877835A6270F854A00AE8362 /* Resources */,
+				AA1571D816A43B21F04D5228 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -372,8 +475,6 @@
 			);
 			mainGroup = 8778357B270F854800AE8362;
 			packageReferences = (
-				877835BA270F862B00AE8362 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				8779DB55271E086900D90A4A /* XCRemoteSwiftPackageReference "ObjectMapper" */,
 			);
 			productRefGroup = 87783585270F854800AE8362 /* Products */;
 			projectDirPath = "";
@@ -414,6 +515,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B6220E84B9E1365AE79F9C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DertOrtagim-DertOrtagimUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2868B46722240D37796E31C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DertOrtagimTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A9E45464275322BAC4B1255 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DertOrtagim-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		998DCA1B0EF02900FDF5C52C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DertOrtagim/Pods-DertOrtagim-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DertOrtagim/Pods-DertOrtagim-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DertOrtagim/Pods-DertOrtagim-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA1571D816A43B21F04D5228 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DertOrtagim-DertOrtagimUITests/Pods-DertOrtagim-DertOrtagimUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DertOrtagim-DertOrtagimUITests/Pods-DertOrtagim-DertOrtagimUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DertOrtagim-DertOrtagimUITests/Pods-DertOrtagim-DertOrtagimUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		87783580270F854800AE8362 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -421,25 +625,41 @@
 			files = (
 				87200F66272D858200D59E52 /* DMViewController.swift in Sources */,
 				87200F6A272D89C800D59E52 /* ProfileViewController.swift in Sources */,
-				877835D0270F896500AE8362 /* Extension.swift in Sources */,
 				8779DB5B271E0F8300D90A4A /* BaseManager.swift in Sources */,
+				8764A57C276BE0F90064F4B8 /* ProfileTableViewCell.swift in Sources */,
 				87200F64272D855400D59E52 /* HomeViewController.swift in Sources */,
+				87089E022771190600F563A3 /* LoginManager.swift in Sources */,
+				87E57308275CB3F4009553C1 /* TextFieldExtension.swift in Sources */,
+				8763F6912765EEE300565E0A /* CreatePostParameters.swift in Sources */,
+				87EF5B492762C581001B57E4 /* LoginParameters.swift in Sources */,
 				8778358C270F854800AE8362 /* ViewController.swift in Sources */,
 				87783588270F854800AE8362 /* AppDelegate.swift in Sources */,
 				877835CA270F886A00AE8362 /* Utility.swift in Sources */,
+				87E5730A275CB73B009553C1 /* ButtonExtension.swift in Sources */,
+				8762880B2764E68400154AAB /* LikePostParameters.swift in Sources */,
 				8763F3E8272DA1CB008AE403 /* HomeTableViewCell.swift in Sources */,
+				8764A584276F69720064F4B8 /* RegisterResult.swift in Sources */,
 				87783592270F854800AE8362 /* DertOrtagim.xcdatamodeld in Sources */,
 				87AC0DCE273C5A86006D07AC /* NewPostViewController.swift in Sources */,
 				87D990DC271B0C0D008F7237 /* NetworkMonitor.swift in Sources */,
+				8764A57E276E1F220064F4B8 /* PostDetailViewController.swift in Sources */,
 				8735574D27160C790013093E /* UserService.swift in Sources */,
+				87EF5B472762C3C3001B57E4 /* RegisterParameters.swift in Sources */,
 				877835C8270F873800AE8362 /* AlamofireManager.swift in Sources */,
+				87089E0627712C8300F563A3 /* BaseViewController.swift in Sources */,
 				87200F68272D861800D59E52 /* NotificationViewController.swift in Sources */,
+				87089E0427712B6300F563A3 /* SessionManager.swift in Sources */,
+				8764A580276E24870064F4B8 /* CommentTableViewCell.swift in Sources */,
+				874E4F34276FE8CD00B93379 /* LoginResult.swift in Sources */,
+				8763F6932765FC3900565E0A /* UpdateUserProfileParameters.swift in Sources */,
 				877835CC270F889900AE8362 /* Constants.swift in Sources */,
+				87E5730C275CB74D009553C1 /* TextViewExtension.swift in Sources */,
+				8763F68F2765E9DD00565E0A /* Post.swift in Sources */,
 				87498ECB271C35F800CA5AF6 /* LoginViewController.swift in Sources */,
+				8764A582276F67D50064F4B8 /* BaseModel.swift in Sources */,
+				874F1DC7275AA08800D94366 /* BaseResult.swift in Sources */,
 				87AC0DD2273C70D4006D07AC /* AlertView.swift in Sources */,
-				8779DB54271E073200D90A4A /* BaseResult.swift in Sources */,
 				87498ECD271C360C00CA5AF6 /* RegisterViewController.swift in Sources */,
-				8735574B2716044D0013093E /* User.swift in Sources */,
 				8778358A270F854800AE8362 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,6 +833,7 @@
 		};
 		877835B2270F854A00AE8362 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 953D5E4177987DD3EAEB2809 /* Pods-DertOrtagim.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -632,6 +853,7 @@
 		};
 		877835B3270F854A00AE8362 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CF9A5E63386B08A5A44F802 /* Pods-DertOrtagim.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -651,6 +873,7 @@
 		};
 		877835B5270F854A00AE8362 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 873230217D4DC5B8B034C90F /* Pods-DertOrtagimTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -673,6 +896,7 @@
 		};
 		877835B6270F854A00AE8362 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E4F1D3D1D66665809BBD0D7 /* Pods-DertOrtagimTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -695,6 +919,7 @@
 		};
 		877835B8270F854A00AE8362 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C444935914BDC95A3C14B684 /* Pods-DertOrtagim-DertOrtagimUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -715,6 +940,7 @@
 		};
 		877835B9270F854A00AE8362 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC414E3945436390AAD7AD20 /* Pods-DertOrtagim-DertOrtagimUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -773,38 +999,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		877835BA270F862B00AE8362 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.4.4;
-			};
-		};
-		8779DB55271E086900D90A4A /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.2.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		877835BB270F862B00AE8362 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 877835BA270F862B00AE8362 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		8779DB56271E086900D90A4A /* ObjectMapper */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8779DB55271E086900D90A4A /* XCRemoteSwiftPackageReference "ObjectMapper" */;
-			productName = ObjectMapper;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		87783590270F854800AE8362 /* DertOrtagim.xcdatamodeld */ = {

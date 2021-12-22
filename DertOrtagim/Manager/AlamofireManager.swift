@@ -47,6 +47,21 @@ struct AlamofireManager<T:Codable> :RestApiProtocol {
         }
     }
     
-    
+    // MARK: SigIn
+//    func signIn(servicePath: URLConvertible , parameters:Parameters , credential : URLCredential, onSucces : @escaping (User) -> Void , onFail : @escaping (String?) -> Void  ) {
+//
+//        let encoding :ParameterEncoding = JSONEncoding.default
+//        let headers:HTTPHeaders = ["Content-type":"application/json; charset=UTF-8"]
+//
+//
+//        AF.request(servicePath, method: .post, parameters: parameters, encoding: encoding, headers: headers)
+//            .authenticate(with: credential).responseJSON { response in
+//                guard let user = response.value as? User else {
+//                    onFail("Sign In Error -> \(response.debugDescription)")
+//                    return
+//                }
+//                onSucces(user)
+//            }
+//    }
 }
 

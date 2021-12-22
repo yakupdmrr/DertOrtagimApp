@@ -1,18 +1,18 @@
 //
-//  User.swift
+//  UpdateUserProfile.swift
 //  DertOrtagim
 //
-//  Created by Yakup Demir on 12.10.2021.
+//  Created by Yakup Demir on 12.12.2021.
 //
 
 import Foundation
 
-// Yapının hazırlanması için yazıldı. Sonradan üzerinde oynanacak.
-class User  {
-    var userName:String?
+struct UpdateUserProfileParameters : Codable {
+    var userId:Int?
+    var email:String?
     var firstName:String?
     var lastName:String?
-    var sex:Int?
+    var userName:String?
     
     func toDictionary() -> [String:Any] {
         var dictionary = [String:Any]()
@@ -26,19 +26,22 @@ class User  {
         if firstName != nil {
             dictionary["firstName"] = firstName
         }
-        if sex != nil {
-            dictionary["sex"] = sex
+        if email != nil {
+            dictionary["email"] = email
         }
+        if userId != nil  {
+            dictionary["userId"] = userId
+        }
+        
         
         return dictionary
     }
+    
     enum CodingKeys:String,CodingKey {
         case userName = "userName"
         case firstName = "firstName"
         case lastName = "lastName"
-        case sex = "sex"
+        case email = "email"
+        case userId = "userId"
     }
-    
 }
-
-

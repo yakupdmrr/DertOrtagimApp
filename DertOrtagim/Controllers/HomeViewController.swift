@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class HomeViewController: UIViewController {
+final class HomeViewController: BaseViewController {
 
     @IBOutlet weak var postTableView: UITableView!
     
@@ -29,13 +29,17 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(floatingButton)
         
-        navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.search, target: self, action: #selector(searchButtonClicked))
-        
-        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.compose, target: self, action: #selector(gotoSettingVC))
+        navigationControl()
         
         postTableView.delegate = self
         postTableView.dataSource = self
 
+    }
+    
+    private func navigationControl(){
+        navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.search, target: self, action: #selector(searchButtonClicked))
+        
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.compose, target: self, action: #selector(gotoSettingVC))
     }
     
     @objc private func gotoSettingVC(){
@@ -77,6 +81,16 @@ final class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PostDetailVC" {
+            
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "PostDetailVC", sender: nil)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 15
     }
@@ -86,7 +100,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.userImage.image = UIImage(named: "profilePhoto")
         cell.userNameLabel.text = "yakupdmrr"
         cell.postTextTxt.text = "Officia veniam ad cillum laboris ut aute. Nostrud aute consequat ea eu voluptate non. Anim incididunt ullamco velit quis eiusmod eiusmod cupidatat veniam."
-        
+        cell.postDateText.text = "17.12.2021"
+        cell.favoriteCountText.text = "2"
+        cell.commentCountText.text = "1"
         return cell
     }
 }
