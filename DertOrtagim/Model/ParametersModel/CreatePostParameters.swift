@@ -8,15 +8,15 @@
 import Foundation
 
 struct CreatePostParameters : Codable {
-    var userdId:Int?
+    var userId:Int?
     var text:String?
     var createDate:String?
     
     func toDictionary() -> [String:Any]{
         var dictionary = [String:Any]()
         
-        if userdId != nil {
-            dictionary["userdId"] = userdId
+        if userId != nil {
+            dictionary["userId"] = userId
         }
         if text != nil {
             dictionary["text"] = text
@@ -28,7 +28,7 @@ struct CreatePostParameters : Codable {
     }
     
     enum CodingKeys:String,CodingKey {
-        case userdId = "userdId"
+        case userId = "userId"
         case text = "text"
         case createDate = "createDate"
     }

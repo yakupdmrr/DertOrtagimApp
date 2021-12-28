@@ -12,7 +12,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,7 +64,7 @@ final class LoginViewController: UIViewController {
     
     // MARK: Register to Page
     @IBAction func toRegisterPage(_ sender: Any) {
-        
+        performSegue(withIdentifier: "toRegisterVC", sender: nil)
         
         
     }

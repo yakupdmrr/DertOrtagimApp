@@ -16,15 +16,18 @@ protocol RestApiProtocol {
     func postData(servicePath:URLConvertible, parameters:Parameters?, onSuccess: @escaping (T) -> Void , onFail : @escaping (String?) -> Void )
 }
 
-struct AlamofireManager<T:Codable> :RestApiProtocol {
+class AlamofireManager<T:Codable> :RestApiProtocol {
     
-    
-    func postData(servicePath: URLConvertible, parameters: Parameters?=nil, onSuccess: @escaping (T) -> Void, onFail: @escaping (String?) -> Void) {
+     func postData(servicePath: URLConvertible, parameters: Parameters?=nil, onSuccess: @escaping (T) -> Void, onFail: @escaping (String?) -> Void) {
         
         let encoding :ParameterEncoding = JSONEncoding.default
-        let headers:HTTPHeaders = ["Content-type":"application/json; charset=UTF-8"]
+        var headers : HTTPHeaders?
+         
+        if LoginManager.instance.getToken() != "" {
+           headers = ["Authorization" : "Bearer \(LoginManager.instance.getToken())"]
+        }
         
-        AF.request(servicePath,method: .post,parameters: parameters,encoding: encoding,headers: headers).validate().responseDecodable(of: T.self) { response in
+         AF.request(servicePath,method: .post,parameters: parameters,encoding: encoding,headers: headers).responseDecodable(of: T.self) { response in
             
             guard let item = response.value else {
                 onFail("Post Error -> \(response.debugDescription)")
@@ -46,22 +49,5 @@ struct AlamofireManager<T:Codable> :RestApiProtocol {
             onSuccess(items)
         }
     }
-    
-    // MARK: SigIn
-//    func signIn(servicePath: URLConvertible , parameters:Parameters , credential : URLCredential, onSucces : @escaping (User) -> Void , onFail : @escaping (String?) -> Void  ) {
-//
-//        let encoding :ParameterEncoding = JSONEncoding.default
-//        let headers:HTTPHeaders = ["Content-type":"application/json; charset=UTF-8"]
-//
-//
-//        AF.request(servicePath, method: .post, parameters: parameters, encoding: encoding, headers: headers)
-//            .authenticate(with: credential).responseJSON { response in
-//                guard let user = response.value as? User else {
-//                    onFail("Sign In Error -> \(response.debugDescription)")
-//                    return
-//                }
-//                onSucces(user)
-//            }
-//    }
 }
 

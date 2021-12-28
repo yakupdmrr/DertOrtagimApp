@@ -6,44 +6,34 @@
 //
 
 import Foundation
-import UIKit
-import SwiftUI
+import JWTDecode
+
 
 class Utility {
-        
+    
     static let instance = Utility()
-
-    // TextFiled Property
-    func textFieldLine(textField : UITextField) {
-        let bottomLine = CALayer()
-        bottomLine.frame = CGRect(x: 0.0, y: textField.frame.height - 1, width: textField.frame.width, height: 1.5)
-        bottomLine.backgroundColor = UIColor.lightGray.cgColor
-        textField.borderStyle = .none
-        textField.layer.addSublayer(bottomLine)
+    
+    func getUserId() -> Int{
+         var userId:Int = Int()
+        do {
+            let data = try decode(jwt: LoginManager.instance.getToken())
+            let dataDict:[String:Any] = data.body
+            guard let id = dataDict["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"] as? String else { return 0 }
+            userId = Int(id) ?? 0
+        }catch {
+            print("UserId Alınamadı!!!")
+        }
+        return userId
     }
     
-    
-    func textFieldAddImage(textField : UITextField , img : UIImage) {
-        let leftImage = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: img.size.width, height: img.size.height))
-        leftImage.tintColor = UIColor.gray
-        leftImage.image = img
-        textField.leftView = leftImage
-        textField.leftViewMode = .always
-    }
-    
-    func buttonProperties(button:UIButton){
-        button.clipsToBounds = true
-        button.layer.masksToBounds = false
-        button.layer.shadowRadius = 10
-        button.layer.shadowOpacity = 0.2
-        button.layer.shadowOffset = CGSize(width: 1, height: 1)
-        button.layer.shadowColor = UIColor.link.cgColor
-    }
-    
-    func textFieldPlaceholderColor(textField: UITextField , placeholder:String){
-        textField.attributedPlaceholder = NSAttributedString(
-            string: placeholder,
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
-    }
+    func dateFormatter(date :Date) -> String{
+       var createDate : String = String()
+     
+       let formatter = DateFormatter()
+       formatter.dateFormat = "yyyy-MM-dd"
+       createDate = formatter.string(from: date)
+       
+       return createDate
+   }
 }
             

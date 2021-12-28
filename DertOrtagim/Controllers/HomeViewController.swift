@@ -6,10 +6,12 @@
 //
 
 import UIKit
-
+import JWTDecode
 final class HomeViewController: BaseViewController {
 
     @IBOutlet weak var postTableView: UITableView!
+    private var postListViewModel : PostViewListModel!
+    private lazy var chosenPost = Post()
     
     private let floatingButton : UIButton = {
         let button = UIButton(frame:CGRect(x: 0, y: 0, width: 60, height: 60))
@@ -33,17 +35,19 @@ final class HomeViewController: BaseViewController {
         
         postTableView.delegate = self
         postTableView.dataSource = self
+        
+        getData()
 
     }
     
     private func navigationControl(){
         navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.search, target: self, action: #selector(searchButtonClicked))
         
-        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.compose, target: self, action: #selector(gotoSettingVC))
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.compose, target: self, action: #selector(gotoSettingVc))
     }
     
-    @objc private func gotoSettingVC(){
-        
+    @objc private func gotoSettingVc(){
+        performSegue(withIdentifier: "gotoSettingVC", sender: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,7 +55,7 @@ final class HomeViewController: BaseViewController {
         
         titleImageView.contentMode = .scaleAspectFit
         
-        let image = UIImage(named: "logo")
+        let image = UIImage(named: "logo1")
         titleImageView.image = image
         
         
@@ -61,6 +65,15 @@ final class HomeViewController: BaseViewController {
 
     @objc private func searchButtonClicked(){
         print("SearchView")
+    }
+    
+    private func getData(){
+        PostService.instance.getAllPost { result in
+            self.postListViewModel = PostViewListModel(postList: result)
+        }
+        DispatchQueue.main.async {
+            self.postTableView.reloadData()
+        }
     }
     
     
@@ -78,31 +91,35 @@ final class HomeViewController: BaseViewController {
     }
 
 }
+
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PostDetailVC" {
-            
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        chosenPost = self.postListViewModel.postList[indexPath.row]
         performSegue(withIdentifier: "PostDetailVC", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        return self.postListViewModel.numberOfSection()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = postTableView.dequeueReusableCell(withIdentifier: "homeTableCell", for: indexPath) as! HomeTableViewCell
-        cell.userImage.image = UIImage(named: "profilePhoto")
+
+        let postView = self.postListViewModel.postAtIndex(indexPath.row)
+        cell.postTextTxt.text = postView.text
+        cell.postDateText.text = postView.date
+        cell.favoriteCountText.text = String(postView.likeCount)
         cell.userNameLabel.text = "yakupdmrr"
-        cell.postTextTxt.text = "Officia veniam ad cillum laboris ut aute. Nostrud aute consequat ea eu voluptate non. Anim incididunt ullamco velit quis eiusmod eiusmod cupidatat veniam."
-        cell.postDateText.text = "17.12.2021"
-        cell.favoriteCountText.text = "2"
-        cell.commentCountText.text = "1"
+        
+        cell.userImage.image = UIImage(named: "profilePhoto")
+
         return cell
     }
 }

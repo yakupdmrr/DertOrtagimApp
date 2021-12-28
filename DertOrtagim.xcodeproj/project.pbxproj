@@ -8,15 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		87089E022771190600F563A3 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87089E012771190600F563A3 /* LoginManager.swift */; };
-		87089E0427712B6300F563A3 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87089E0327712B6300F563A3 /* SessionManager.swift */; };
 		87089E0627712C8300F563A3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87089E0527712C8300F563A3 /* BaseViewController.swift */; };
 		87200F64272D855400D59E52 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87200F63272D855400D59E52 /* HomeViewController.swift */; };
 		87200F66272D858200D59E52 /* DMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87200F65272D858200D59E52 /* DMViewController.swift */; };
 		87200F68272D861800D59E52 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87200F67272D861800D59E52 /* NotificationViewController.swift */; };
 		87200F6A272D89C800D59E52 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87200F69272D89C800D59E52 /* ProfileViewController.swift */; };
+		872B5182277512000053C985 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872B5181277512000053C985 /* PostService.swift */; };
 		8735574D27160C790013093E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8735574C27160C790013093E /* UserService.swift */; };
 		87498ECB271C35F800CA5AF6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87498ECA271C35F800CA5AF6 /* LoginViewController.swift */; };
 		87498ECD271C360C00CA5AF6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87498ECC271C360C00CA5AF6 /* RegisterViewController.swift */; };
+		874BB87727785F9A00F835C9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874BB87627785F9A00F835C9 /* SettingViewController.swift */; };
 		874E4F34276FE8CD00B93379 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874E4F33276FE8CD00B93379 /* LoginResult.swift */; };
 		874F1DC7275AA08800D94366 /* BaseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874F1DC6275AA08800D94366 /* BaseResult.swift */; };
 		8762880B2764E68400154AAB /* LikePostParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8762880A2764E68400154AAB /* LikePostParameters.swift */; };
@@ -45,6 +46,8 @@
 		87AC0DCE273C5A86006D07AC /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AC0DCD273C5A86006D07AC /* NewPostViewController.swift */; };
 		87AC0DD0273C6D05006D07AC /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87AC0DCF273C6D05006D07AC /* AlertView.xib */; };
 		87AC0DD2273C70D4006D07AC /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AC0DD1273C70D4006D07AC /* AlertView.swift */; };
+		87C19B73277506E900D2CB77 /* CreatePostResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C19B72277506E900D2CB77 /* CreatePostResult.swift */; };
+		87CCDC8F277A6D0A00856DD9 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CCDC8E277A6D0A00856DD9 /* PostViewModel.swift */; };
 		87D990DC271B0C0D008F7237 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D990DB271B0C0D008F7237 /* NetworkMonitor.swift */; };
 		87E57308275CB3F4009553C1 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E57307275CB3F4009553C1 /* TextFieldExtension.swift */; };
 		87E5730A275CB73B009553C1 /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E57309275CB73B009553C1 /* ButtonExtension.swift */; };
@@ -80,16 +83,17 @@
 		7CF9A5E63386B08A5A44F802 /* Pods-DertOrtagim.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DertOrtagim.release.xcconfig"; path = "Target Support Files/Pods-DertOrtagim/Pods-DertOrtagim.release.xcconfig"; sourceTree = "<group>"; };
 		86CA7E54BB64683E3903C0D4 /* Pods_DertOrtagim.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DertOrtagim.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87089E012771190600F563A3 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
-		87089E0327712B6300F563A3 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		87089E0527712C8300F563A3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		87200F63272D855400D59E52 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		87200F65272D858200D59E52 /* DMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMViewController.swift; sourceTree = "<group>"; };
 		87200F67272D861800D59E52 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		87200F69272D89C800D59E52 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		872B5181277512000053C985 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		873230217D4DC5B8B034C90F /* Pods-DertOrtagimTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DertOrtagimTests.debug.xcconfig"; path = "Target Support Files/Pods-DertOrtagimTests/Pods-DertOrtagimTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8735574C27160C790013093E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		87498ECA271C35F800CA5AF6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		87498ECC271C360C00CA5AF6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		874BB87627785F9A00F835C9 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		874E4F33276FE8CD00B93379 /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
 		874F1DC6275AA08800D94366 /* BaseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResult.swift; sourceTree = "<group>"; };
 		8762880A2764E68400154AAB /* LikePostParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePostParameters.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 		87AC0DCD273C5A86006D07AC /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		87AC0DCF273C6D05006D07AC /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 		87AC0DD1273C70D4006D07AC /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		87C19B72277506E900D2CB77 /* CreatePostResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostResult.swift; sourceTree = "<group>"; };
+		87CCDC8E277A6D0A00856DD9 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		87D990DB271B0C0D008F7237 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		87E57307275CB3F4009553C1 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		87E57309275CB73B009553C1 /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
@@ -170,6 +176,7 @@
 				8764A581276F67D50064F4B8 /* BaseModel.swift */,
 				8764A583276F69720064F4B8 /* RegisterResult.swift */,
 				874E4F33276FE8CD00B93379 /* LoginResult.swift */,
+				87C19B72277506E900D2CB77 /* CreatePostResult.swift */,
 			);
 			path = ResultModel;
 			sourceTree = "<group>";
@@ -259,7 +266,6 @@
 				8779DB5A271E0F8300D90A4A /* BaseManager.swift */,
 				87AC0DD1273C70D4006D07AC /* AlertView.swift */,
 				87089E012771190600F563A3 /* LoginManager.swift */,
-				87089E0327712B6300F563A3 /* SessionManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -279,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				8735574C27160C790013093E /* UserService.swift */,
+				872B5181277512000053C985 /* PostService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -286,6 +293,7 @@
 		877835C2270F86BD00AE8362 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				87CCDC8E277A6D0A00856DD9 /* PostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -306,13 +314,14 @@
 				8778358B270F854800AE8362 /* ViewController.swift */,
 				87498ECA271C35F800CA5AF6 /* LoginViewController.swift */,
 				87498ECC271C360C00CA5AF6 /* RegisterViewController.swift */,
-				87200F63272D855400D59E52 /* HomeViewController.swift */,
 				87200F65272D858200D59E52 /* DMViewController.swift */,
+				87200F63272D855400D59E52 /* HomeViewController.swift */,
 				87200F67272D861800D59E52 /* NotificationViewController.swift */,
 				87200F69272D89C800D59E52 /* ProfileViewController.swift */,
 				87AC0DCD273C5A86006D07AC /* NewPostViewController.swift */,
 				8764A57D276E1F210064F4B8 /* PostDetailViewController.swift */,
 				87089E0527712C8300F563A3 /* BaseViewController.swift */,
+				874BB87627785F9A00F835C9 /* SettingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -641,6 +650,7 @@
 				8764A584276F69720064F4B8 /* RegisterResult.swift in Sources */,
 				87783592270F854800AE8362 /* DertOrtagim.xcdatamodeld in Sources */,
 				87AC0DCE273C5A86006D07AC /* NewPostViewController.swift in Sources */,
+				87C19B73277506E900D2CB77 /* CreatePostResult.swift in Sources */,
 				87D990DC271B0C0D008F7237 /* NetworkMonitor.swift in Sources */,
 				8764A57E276E1F220064F4B8 /* PostDetailViewController.swift in Sources */,
 				8735574D27160C790013093E /* UserService.swift in Sources */,
@@ -648,7 +658,6 @@
 				877835C8270F873800AE8362 /* AlamofireManager.swift in Sources */,
 				87089E0627712C8300F563A3 /* BaseViewController.swift in Sources */,
 				87200F68272D861800D59E52 /* NotificationViewController.swift in Sources */,
-				87089E0427712B6300F563A3 /* SessionManager.swift in Sources */,
 				8764A580276E24870064F4B8 /* CommentTableViewCell.swift in Sources */,
 				874E4F34276FE8CD00B93379 /* LoginResult.swift in Sources */,
 				8763F6932765FC3900565E0A /* UpdateUserProfileParameters.swift in Sources */,
@@ -657,8 +666,11 @@
 				8763F68F2765E9DD00565E0A /* Post.swift in Sources */,
 				87498ECB271C35F800CA5AF6 /* LoginViewController.swift in Sources */,
 				8764A582276F67D50064F4B8 /* BaseModel.swift in Sources */,
+				872B5182277512000053C985 /* PostService.swift in Sources */,
+				87CCDC8F277A6D0A00856DD9 /* PostViewModel.swift in Sources */,
 				874F1DC7275AA08800D94366 /* BaseResult.swift in Sources */,
 				87AC0DD2273C70D4006D07AC /* AlertView.swift in Sources */,
+				874BB87727785F9A00F835C9 /* SettingViewController.swift in Sources */,
 				87498ECD271C360C00CA5AF6 /* RegisterViewController.swift in Sources */,
 				8778358A270F854800AE8362 /* SceneDelegate.swift in Sources */,
 			);

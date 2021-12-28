@@ -7,9 +7,10 @@
 
 import Foundation
 struct Post:Codable {
+        
     var id:Int?
     var text:String?
-    var postDate:String?
-    // devamı gelen response göre eklenecek
- 
+    var userId:Int?
+    var likeCount:Int?
+    var date:String?
 }

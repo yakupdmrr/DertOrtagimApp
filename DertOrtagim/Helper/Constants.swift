@@ -8,7 +8,7 @@
 import Foundation
 
 class Constants {
-    static let baseURL :String = "http://192.168.1.155:45455/api"
+    static let baseURL :String = "http://192.168.1.102:45455/api"
     
     // MARK: Register
     static let registerPath : String = baseURL + "/auths/register"
@@ -17,7 +17,7 @@ class Constants {
     static let loginPath : String = baseURL + "/auths/login"
     
     // MARK: CreatePost
-    static let createPostPath : String =  baseURL + "/posts"
+    static let createPostPath : String =  baseURL + "/posts" // userId gelecek
     
     // MARK: GetAllPost
     static let getAllPostPath : String = baseURL + "/posts"

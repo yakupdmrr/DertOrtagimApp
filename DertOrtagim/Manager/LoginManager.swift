@@ -15,12 +15,12 @@ class LoginManager: NSObject {
         UserDefaults.standard.set(token, forKey: "token")
     }
     func getToken() -> String {
-        return UserDefaults.standard.object(forKey: "token") as? String ?? ""
+        return UserDefaults.standard.string(forKey: "token") ?? ""
     }
     func setExpiration(expiration:String){
         UserDefaults.standard.set(expiration, forKey: "expiration")
     }
     func getExpiration() -> String {
-        return UserDefaults.standard.object(forKey: "expiration") as? String ?? ""
+        return UserDefaults.standard.string(forKey: "expiration") ?? ""
     }
 }

@@ -20,8 +20,29 @@ final class NewPostViewController: UIViewController,UITextViewDelegate {
         postTextView.text = "Derdini Paylaş..."
         postTextView.textColor = UIColor.lightGray
         postTextView.delegate = self
-                
+        
     }
+    
+    private func createAPost(){
+
+        var createPostParameters = CreatePostParameters()
+        
+        let date = Date()
+        createPostParameters.userId = Utility.instance.getUserId()
+        createPostParameters.text = postTextView.text
+        createPostParameters.createDate = Utility.instance.dateFormatter(date: date)
+        
+        PostService.instance.createPost(parameters: createPostParameters) { result in
+            if result.success {
+                AlertView.instance.showMessage(title: "Başarılı İşlem", message: "Başarılı Post İşlemi", type: .success)
+                self.dismiss(animated: true, completion: nil)
+                
+            } else {
+                AlertView.instance.showMessage(title: "Başarısız İşlem", message: "Başarısız Post İşlemi", type: .warning)
+            }
+        }
+    }
+    
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == UIColor.lightGray {
@@ -39,7 +60,7 @@ final class NewPostViewController: UIViewController,UITextViewDelegate {
     
     // MARK: Shared Post
     @IBAction func shareButtonClicked(_ sender: Any) {
-       
+        createAPost()
     }
     
     @IBAction func backButtonClicked(_ sender: Any) {
