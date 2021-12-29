@@ -17,6 +17,7 @@ class ProfileTableViewCell: UITableViewCell {
     @IBOutlet weak var postDateText: UILabel!
     @IBOutlet weak var commentButton: UIButton!
     @IBOutlet weak var postText: UILabel!
+    
     @IBOutlet weak var userNameText: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -28,7 +28,19 @@ class PostService :NSObject {
         getPostModel.getAllData(servicePath: Constants.getAllPostPath) { response in
             completionHandler(response)
         } onFail: { error in
-            print("Error -> \(error?.debugDescription ?? "Nil Data")")
+            AlertView.instance.showMessage(title: "Upps Bir Şeyler Ters Gitti!", message: error.debugDescription, type: .error)
+            print("Error -> \(error?.debugDescription ?? "")")
+        }
+
+    }
+    
+    func getPostsById(id:String,completionHandler:@escaping (GetPosts) -> Void) {
+        
+        getPostModel.getAllData(servicePath: Constants.getPostsByUserIdPath + id) { response in
+            completionHandler(response)
+        } onFail: { error in
+            AlertView.instance.showMessage(title: "Upps Bir Şeyler Ters Gitti!", message: error.debugDescription, type: .error)
+            print("Error -> \(error?.debugDescription ?? "")")
         }
 
     }

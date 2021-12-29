@@ -13,6 +13,7 @@ final class HomeViewController: BaseViewController {
     private var postListViewModel : PostViewListModel?
     private lazy var chosenPost = Post()
     private var userIdList = [Int]()
+    private var postsList = [Post]()
     @IBOutlet weak var indicator: UIActivityIndicatorView!{
         didSet{
             indicator.hidesWhenStopped = true
@@ -47,6 +48,15 @@ final class HomeViewController: BaseViewController {
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        DispatchQueue.main.async{
+            self.postListViewModel?.postList.removeAll(keepingCapacity: false)
+            self.getData()
+            self.indicator.stopAnimating()
+            self.postTableView.reloadData()
+        }
+    }
+    
     private func navigationControl(){
         navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.refresh, target: self, action: #selector(refreshList))
         
@@ -58,6 +68,7 @@ final class HomeViewController: BaseViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
         let titleImageView =  UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
         
         titleImageView.contentMode = .scaleAspectFit
@@ -85,11 +96,13 @@ final class HomeViewController: BaseViewController {
         
         PostService.instance.getAllPost { result in
             
-            for i in result.data {
+            self.postsList = result.data.sorted(by: { $0.id ?? 0 > $1.id ?? 0 })
+
+            for i in self.postsList {
                 self.userIdList.append(i.userId ?? 0)
             }
             
-            self.postListViewModel = PostViewListModel(postList: result.data)
+            self.postListViewModel = PostViewListModel(postList: self.postsList)
             DispatchQueue.main.async {
                 self.indicator.stopAnimating()
                 self.postTableView.reloadData()
@@ -138,14 +151,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.postTextTxt.text = postView?.text
         
         
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.locale = Locale(identifier: "en_US")
-//        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-//        let date = dateFormatter.date(from: postView?.date ?? "")
-//
-//        let stringDate = dateFormatter.string(from: date)
+        let splitDate = postView?.date.components(separatedBy: "T")
         
-        cell.postDateText.text = postView?.date
+        if let fulldate = splitDate?[0]{
+            cell.postDateText.text = fulldate
+        }
+        
         
         
         if let likeCount = String(postView?.likeCount ?? 0) as? String {
