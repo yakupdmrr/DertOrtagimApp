@@ -17,11 +17,9 @@ class PostDetailViewController: UIViewController {
     @IBOutlet weak var commentButton: UIButton!
     @IBOutlet weak var postText: UILabel!
     @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var userImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        userImage.layer.cornerRadius = 30
+
         favoriteButton.setTitle("", for: .normal)
         commentButton.setTitle("", for: .normal)
         
@@ -46,7 +44,6 @@ extension PostDetailViewController : UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = detailTableView.dequeueReusableCell(withIdentifier: "commentCell", for: indexPath) as!  CommentTableViewCell
-        cell.profileImage.image = UIImage(named: "profilePhoto")
         cell.userNameText.text = "yakupdmrr"
         cell.commentText.text = "Güzel bir yorum"
         return cell

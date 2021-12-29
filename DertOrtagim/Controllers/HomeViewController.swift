@@ -6,12 +6,19 @@
 //
 
 import UIKit
-import JWTDecode
+
 final class HomeViewController: BaseViewController {
 
     @IBOutlet weak var postTableView: UITableView!
-    private var postListViewModel : PostViewListModel!
+    private var postListViewModel : PostViewListModel?
     private lazy var chosenPost = Post()
+    private var userIdList = [Int]()
+    @IBOutlet weak var indicator: UIActivityIndicatorView!{
+        didSet{
+            indicator.hidesWhenStopped = true
+        }
+    }
+    
     
     private let floatingButton : UIButton = {
         let button = UIButton(frame:CGRect(x: 0, y: 0, width: 60, height: 60))
@@ -41,7 +48,7 @@ final class HomeViewController: BaseViewController {
     }
     
     private func navigationControl(){
-        navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.search, target: self, action: #selector(searchButtonClicked))
+        navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.refresh, target: self, action: #selector(refreshList))
         
         navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.compose, target: self, action: #selector(gotoSettingVc))
     }
@@ -63,17 +70,32 @@ final class HomeViewController: BaseViewController {
     }
     
 
-    @objc private func searchButtonClicked(){
-        print("SearchView")
+    @objc private func refreshList(){
+        DispatchQueue.main.async{
+            self.postListViewModel?.postList.removeAll(keepingCapacity: false)
+            self.getData()
+            self.indicator.stopAnimating()
+            self.postTableView.reloadData()
+        }
     }
     
     private func getData(){
+        indicator.center = self.view.center
+        indicator.startAnimating()
+        
         PostService.instance.getAllPost { result in
-            self.postListViewModel = PostViewListModel(postList: result)
+            
+            for i in result.data {
+                self.userIdList.append(i.userId ?? 0)
+            }
+            
+            self.postListViewModel = PostViewListModel(postList: result.data)
+            DispatchQueue.main.async {
+                self.indicator.stopAnimating()
+                self.postTableView.reloadData()
+            }
         }
-        DispatchQueue.main.async {
-            self.postTableView.reloadData()
-        }
+       
     }
     
     
@@ -101,25 +123,49 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        chosenPost = self.postListViewModel.postList[indexPath.row]
+//        chosenPost = self.postListViewModel.postList[indexPath.row]
         performSegue(withIdentifier: "PostDetailVC", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.postListViewModel.numberOfSection()
+        return self.postListViewModel?.numberOfSection() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = postTableView.dequeueReusableCell(withIdentifier: "homeTableCell", for: indexPath) as! HomeTableViewCell
 
-        let postView = self.postListViewModel.postAtIndex(indexPath.row)
-        cell.postTextTxt.text = postView.text
-        cell.postDateText.text = postView.date
-        cell.favoriteCountText.text = String(postView.likeCount)
-        cell.userNameLabel.text = "yakupdmrr"
+        let postView = self.postListViewModel?.postAtIndex(indexPath.row)
+        cell.postTextTxt.text = postView?.text
         
-        cell.userImage.image = UIImage(named: "profilePhoto")
-
+        
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.locale = Locale(identifier: "en_US")
+//        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+//        let date = dateFormatter.date(from: postView?.date ?? "")
+//
+//        let stringDate = dateFormatter.string(from: date)
+        
+        cell.postDateText.text = postView?.date
+        
+        
+        if let likeCount = String(postView?.likeCount ?? 0) as? String {
+            cell.favoriteCountText.text = likeCount
+        }
+        
+        for i in userIdList {
+            if i != 0 {
+                if postView?.userId != nil {
+                    if i == postView?.userId {
+                        if let userID = String(postView?.userId ?? 0) as? String {
+                            UserService.instance.getUserById(id: userID) { result in
+                                cell.userNameLabel.text = result.userName
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
         return cell
     }
 }

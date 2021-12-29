@@ -12,11 +12,10 @@ final class NewPostViewController: UIViewController,UITextViewDelegate {
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var postTextView: UITextView!
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var profileImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        profileImage.layer.cornerRadius = 25
+        
         postTextView.text = "Derdini Paylaş..."
         postTextView.textColor = UIColor.lightGray
         postTextView.delegate = self

@@ -17,10 +17,13 @@ class Constants {
     static let loginPath : String = baseURL + "/auths/login"
     
     // MARK: CreatePost
-    static let createPostPath : String =  baseURL + "/posts" // userId gelecek
+    static let createPostPath : String = baseURL + "/posts" // userId gelecek
     
     // MARK: GetAllPost
     static let getAllPostPath : String = baseURL + "/posts"
+    
+    // MARK: GetByUserId
+    static let getByUserId : String = baseURL + "/users/getUserById?userId="
     
     // MARK: GetPostById
     static let getPostByIdPath : String = baseURL + "/posts/" // postId gelecek

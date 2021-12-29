@@ -11,7 +11,7 @@ class PostService :NSObject {
     static let instance = PostService()
     
     private var postModel : AlamofireManager<CreatePostResult> = AlamofireManager<CreatePostResult>()
-    private var getPostModel : AlamofireManager<Post> = AlamofireManager<Post>()
+    private var getPostModel : AlamofireManager<GetPosts> = AlamofireManager<GetPosts>()
     
     func createPost(parameters:CreatePostParameters,completionHandler:@escaping (CreatePostResult) -> Void) {
         
@@ -23,7 +23,7 @@ class PostService :NSObject {
         }
     }
     
-    func getAllPost(completionHandler:@escaping ([Post])-> Void){
+    func getAllPost(completionHandler:@escaping (GetPosts)-> Void){
         
         getPostModel.getAllData(servicePath: Constants.getAllPostPath) { response in
             completionHandler(response)

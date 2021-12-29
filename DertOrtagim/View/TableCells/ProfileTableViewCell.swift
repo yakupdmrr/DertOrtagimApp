@@ -18,11 +18,10 @@ class ProfileTableViewCell: UITableViewCell {
     @IBOutlet weak var commentButton: UIButton!
     @IBOutlet weak var postText: UILabel!
     @IBOutlet weak var userNameText: UILabel!
-    @IBOutlet weak var profileImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        profileImage.layer.cornerRadius = 30
+
         commentButton.setTitle("", for: .normal)
         favoriteButton.setTitle("", for: .normal)
         

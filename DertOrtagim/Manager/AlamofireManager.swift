@@ -12,7 +12,7 @@ import Alamofire
 protocol RestApiProtocol {
     associatedtype T
     
-    func getAllData(servicePath:URLConvertible,onSuccess: @escaping ([T]) -> Void ,  onFail: @escaping (String?) -> Void)
+    func getAllData(servicePath:URLConvertible,onSuccess: @escaping (T) -> Void ,  onFail: @escaping (String?) -> Void)
     func postData(servicePath:URLConvertible, parameters:Parameters?, onSuccess: @escaping (T) -> Void , onFail : @escaping (String?) -> Void )
 }
 
@@ -38,9 +38,10 @@ class AlamofireManager<T:Codable> :RestApiProtocol {
         }
     }
     
-    func getAllData(servicePath: URLConvertible, onSuccess: @escaping ([T]) -> Void, onFail: @escaping (String?) -> Void) {
+    
+    func getAllData(servicePath: URLConvertible, onSuccess: @escaping (T) -> Void, onFail: @escaping (String?) -> Void) {
         
-        AF.request(servicePath,method: .get).validate().responseDecodable(of: [T].self) { (response) in
+        AF.request(servicePath,method: .get).responseDecodable(of: T.self) { (response) in
             
             guard let items = response.value else {
                 onFail("Get Error -> \(response.debugDescription)")

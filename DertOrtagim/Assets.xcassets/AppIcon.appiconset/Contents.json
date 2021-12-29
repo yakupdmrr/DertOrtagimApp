@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "WhatsApp Image 2021-10-28 at 22.16.09 (1).jpeg",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
@@ -12,13 +11,11 @@
       "size" : "20x20"
     },
     {
-      "filename" : "WhatsApp Image 2021-10-29 at 00.12.14.jpeg",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "WhatsApp Image 2021-10-28 at 22.16.08 (1).jpeg",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
@@ -39,7 +36,6 @@
       "size" : "60x60"
     },
     {
-      "filename" : "WhatsApp Image 2021-10-28 at 22.16.09.jpeg",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"

@@ -13,4 +13,6 @@ struct Post:Codable {
     var userId:Int?
     var likeCount:Int?
     var date:String?
+
+    
 }

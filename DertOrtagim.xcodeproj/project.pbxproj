@@ -10,8 +10,6 @@
 		87089E022771190600F563A3 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87089E012771190600F563A3 /* LoginManager.swift */; };
 		87089E0627712C8300F563A3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87089E0527712C8300F563A3 /* BaseViewController.swift */; };
 		87200F64272D855400D59E52 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87200F63272D855400D59E52 /* HomeViewController.swift */; };
-		87200F66272D858200D59E52 /* DMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87200F65272D858200D59E52 /* DMViewController.swift */; };
-		87200F68272D861800D59E52 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87200F67272D861800D59E52 /* NotificationViewController.swift */; };
 		87200F6A272D89C800D59E52 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87200F69272D89C800D59E52 /* ProfileViewController.swift */; };
 		872B5182277512000053C985 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872B5181277512000053C985 /* PostService.swift */; };
 		8735574D27160C790013093E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8735574C27160C790013093E /* UserService.swift */; };
@@ -30,6 +28,8 @@
 		8764A580276E24870064F4B8 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8764A57F276E24870064F4B8 /* CommentTableViewCell.swift */; };
 		8764A582276F67D50064F4B8 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8764A581276F67D50064F4B8 /* BaseModel.swift */; };
 		8764A584276F69720064F4B8 /* RegisterResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8764A583276F69720064F4B8 /* RegisterResult.swift */; };
+		876C3B28277BBCC100309069 /* GetPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876C3B27277BBCC100309069 /* GetPosts.swift */; };
+		876C3B2A277BD00A00309069 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876C3B29277BD00A00309069 /* User.swift */; };
 		87783588270F854800AE8362 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87783587270F854800AE8362 /* AppDelegate.swift */; };
 		8778358A270F854800AE8362 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87783589270F854800AE8362 /* SceneDelegate.swift */; };
 		8778358C270F854800AE8362 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8778358B270F854800AE8362 /* ViewController.swift */; };
@@ -85,8 +85,6 @@
 		87089E012771190600F563A3 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		87089E0527712C8300F563A3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		87200F63272D855400D59E52 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		87200F65272D858200D59E52 /* DMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMViewController.swift; sourceTree = "<group>"; };
-		87200F67272D861800D59E52 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		87200F69272D89C800D59E52 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		872B5181277512000053C985 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		873230217D4DC5B8B034C90F /* Pods-DertOrtagimTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DertOrtagimTests.debug.xcconfig"; path = "Target Support Files/Pods-DertOrtagimTests/Pods-DertOrtagimTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +104,8 @@
 		8764A57F276E24870064F4B8 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		8764A581276F67D50064F4B8 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		8764A583276F69720064F4B8 /* RegisterResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResult.swift; sourceTree = "<group>"; };
+		876C3B27277BBCC100309069 /* GetPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPosts.swift; sourceTree = "<group>"; };
+		876C3B29277BD00A00309069 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		87783584270F854800AE8362 /* DertOrtagim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DertOrtagim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87783587270F854800AE8362 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87783589270F854800AE8362 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +177,8 @@
 				8764A583276F69720064F4B8 /* RegisterResult.swift */,
 				874E4F33276FE8CD00B93379 /* LoginResult.swift */,
 				87C19B72277506E900D2CB77 /* CreatePostResult.swift */,
+				876C3B27277BBCC100309069 /* GetPosts.swift */,
+				876C3B29277BD00A00309069 /* User.swift */,
 			);
 			path = ResultModel;
 			sourceTree = "<group>";
@@ -314,9 +316,7 @@
 				8778358B270F854800AE8362 /* ViewController.swift */,
 				87498ECA271C35F800CA5AF6 /* LoginViewController.swift */,
 				87498ECC271C360C00CA5AF6 /* RegisterViewController.swift */,
-				87200F65272D858200D59E52 /* DMViewController.swift */,
 				87200F63272D855400D59E52 /* HomeViewController.swift */,
-				87200F67272D861800D59E52 /* NotificationViewController.swift */,
 				87200F69272D89C800D59E52 /* ProfileViewController.swift */,
 				87AC0DCD273C5A86006D07AC /* NewPostViewController.swift */,
 				8764A57D276E1F210064F4B8 /* PostDetailViewController.swift */,
@@ -632,7 +632,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87200F66272D858200D59E52 /* DMViewController.swift in Sources */,
 				87200F6A272D89C800D59E52 /* ProfileViewController.swift in Sources */,
 				8779DB5B271E0F8300D90A4A /* BaseManager.swift in Sources */,
 				8764A57C276BE0F90064F4B8 /* ProfileTableViewCell.swift in Sources */,
@@ -643,6 +642,7 @@
 				87EF5B492762C581001B57E4 /* LoginParameters.swift in Sources */,
 				8778358C270F854800AE8362 /* ViewController.swift in Sources */,
 				87783588270F854800AE8362 /* AppDelegate.swift in Sources */,
+				876C3B28277BBCC100309069 /* GetPosts.swift in Sources */,
 				877835CA270F886A00AE8362 /* Utility.swift in Sources */,
 				87E5730A275CB73B009553C1 /* ButtonExtension.swift in Sources */,
 				8762880B2764E68400154AAB /* LikePostParameters.swift in Sources */,
@@ -650,6 +650,7 @@
 				8764A584276F69720064F4B8 /* RegisterResult.swift in Sources */,
 				87783592270F854800AE8362 /* DertOrtagim.xcdatamodeld in Sources */,
 				87AC0DCE273C5A86006D07AC /* NewPostViewController.swift in Sources */,
+				876C3B2A277BD00A00309069 /* User.swift in Sources */,
 				87C19B73277506E900D2CB77 /* CreatePostResult.swift in Sources */,
 				87D990DC271B0C0D008F7237 /* NetworkMonitor.swift in Sources */,
 				8764A57E276E1F220064F4B8 /* PostDetailViewController.swift in Sources */,
@@ -657,7 +658,6 @@
 				87EF5B472762C3C3001B57E4 /* RegisterParameters.swift in Sources */,
 				877835C8270F873800AE8362 /* AlamofireManager.swift in Sources */,
 				87089E0627712C8300F563A3 /* BaseViewController.swift in Sources */,
-				87200F68272D861800D59E52 /* NotificationViewController.swift in Sources */,
 				8764A580276E24870064F4B8 /* CommentTableViewCell.swift in Sources */,
 				874E4F34276FE8CD00B93379 /* LoginResult.swift in Sources */,
 				8763F6932765FC3900565E0A /* UpdateUserProfileParameters.swift in Sources */,
