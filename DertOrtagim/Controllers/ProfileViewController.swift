@@ -124,8 +124,6 @@ extension ProfileViewController : UITableViewDelegate,UITableViewDataSource {
                 cell.userNameText.text = result.userName
             }
         }
-        
-       
         return cell
     }
     
