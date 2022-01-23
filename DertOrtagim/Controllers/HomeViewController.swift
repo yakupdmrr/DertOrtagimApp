@@ -132,13 +132,20 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PostDetailVC" {
+            let destinationVc = segue.destination as! PostDetailViewController
+            
+            destinationVc.selectPost.date = chosenPost.date
+            destinationVc.selectPost.text = chosenPost.text
+            destinationVc.selectPost.userId = chosenPost.userId
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        chosenPost = self.postListViewModel.postList[indexPath.row]
+        chosenPost = (self.postListViewModel?.postList[indexPath.row]) as? Post ?? Post()
         performSegue(withIdentifier: "PostDetailVC", sender: nil)
     }
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.postListViewModel?.numberOfSection() ?? 0

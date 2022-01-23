@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class NewPostViewController: UIViewController,UITextViewDelegate {
+final class NewPostViewController: BaseViewController,UITextViewDelegate {
 
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var postTextView: UITextView!
